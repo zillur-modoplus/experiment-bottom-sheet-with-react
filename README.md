@@ -1,12 +1,12 @@
 ## Table of Contents
 
-- [Overview] (#Overview)
-- [Current-State] (#Current-State)
-- [Acceptance-Criteria] (#Acceptance-Criteria)
-- [Stand-Alone-App-Description] (#Stand-Alone-App-Description)
-- [Tried-Packages] (#Tried-Packages)
-- [React-Bottom-Sheet] (#React-Bottom-Sheet)
-- [Spring-Bottom-Sheet] (#Spring-Bottom-Sheet)
+- [Overview](#Overview)
+- [Current-State](#Current-State)
+- [Acceptance-Criteria](#Acceptance-Criteria)
+- [Stand-Alone-App-Description](#Stand-Alone-App-Description)
+- [Tried-Packages](#Tried-Packages)
+- [React-Bottom-Sheet](#React-Bottom-Sheet)
+- [Spring-Bottom-Sheet](#Spring-Bottom-Sheet)
 
 # Overview
 
