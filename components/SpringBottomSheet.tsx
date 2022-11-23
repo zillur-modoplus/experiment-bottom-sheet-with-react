@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import { useState } from "react";
 import { BottomSheet } from "react-spring-bottom-sheet";
 
@@ -9,7 +10,9 @@ export default function SpringBottomSheet() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <button onClick={() => setOpen(true)}>Open</button>
+      <Button colorScheme="blue" onClick={() => setOpen(true)}>
+        Open
+      </Button>
       <BottomSheet open={open}>My awesome content here</BottomSheet>
     </>
   );
