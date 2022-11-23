@@ -1,4 +1,5 @@
 import {
+  Box,
   Tab,
   TabList,
   TabPanel,
@@ -57,27 +58,27 @@ export const tvSitcom = [
 
 export default function HorizontalTab() {
   return (
-    <Tabs overflow="auto">
-      <TabList
-        overflowY="auto"
-        sx={{
-          scrollbarWidth: "none",
-          "::-webkit-scrollbar": {
-            display: "none",
-          },
-        }}
-      >
-        {tvSitcom.map(({ id, title }) => (
-          <Tab px={7} color="#000" whiteSpace="nowrap" key={id}>
-            {title}
-          </Tab>
-        ))}
-      </TabList>
+    <Box>
+      <Tabs>
+        <TabList
+          overflowY="hidden"
+          sx={{
+            scrollbarWidth: "none",
+            "::-webkit-scrollbar": {
+              display: "none",
+            },
+          }}
+        >
+          {tvSitcom.map(({ id, title }) => (
+            <Tab px={7} color="#000" whiteSpace="nowrap" key={id}>
+              {title}
+            </Tab>
+          ))}
+        </TabList>
 
-      <TabPanels>
-        {tvSitcom.map(({ id, title, Season, favChar, rank }) => (
-          <TabPanel key={id}>
-            <VStack>
+        <TabPanels>
+          {tvSitcom.map(({ id, title, Season, favChar, rank }) => (
+            <TabPanel key={id}>
               <Text color="#333" fontWeight={700}>
                 Name:{" "}
                 <Text as="span" color="#000" fontWeight={400}>
@@ -222,11 +223,11 @@ export default function HorizontalTab() {
                   {rank}
                 </Text>
               </Text>
-              {/* {title === "The Office" && <TabInsideTab />} */}
-            </VStack>
-          </TabPanel>
-        ))}
-      </TabPanels>
-    </Tabs>
+              {title === "The Office" && <TabInsideTab />}
+            </TabPanel>
+          ))}
+        </TabPanels>
+      </Tabs>
+    </Box>
   );
 }

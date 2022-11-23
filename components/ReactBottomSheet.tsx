@@ -1,8 +1,8 @@
 import Sheet, { SheetRef } from "react-modal-sheet";
 import { useState } from "react";
-import HorizontalTab from "./HorizontalTab";
+import HorizontalTab, { tvSitcom } from "./HorizontalTab";
 import React from "react";
-import { Button, Text, VStack } from "@chakra-ui/react";
+import { Button, Flex, Text, VStack } from "@chakra-ui/react";
 
 export default function ReactBottomSheet() {
   const ref = React.useRef<SheetRef>();
@@ -18,7 +18,7 @@ export default function ReactBottomSheet() {
         onClose={() => setOpen(false)}
         snapPoints={[600, 400, 100, 0]}
         springConfig={{ stiffness: 150, damping: 20, mass: 1 }}
-        // disableDrag={true}
+        disableDrag={true}
       >
         <Sheet.Container>
           <Sheet.Header
@@ -56,6 +56,13 @@ export default function ReactBottomSheet() {
               voluptate sunt modi consequuntur iusto aspernatur!
             </Text> */}
             <HorizontalTab />
+            <Flex whiteSpace="nowrap" overflowX="auto" p={5}>
+              {tvSitcom.map(({ id, title }) => (
+                <Text p={5} key={id}>
+                  {title}
+                </Text>
+              ))}
+            </Flex>
           </Sheet.Content>
         </Sheet.Container>
 
