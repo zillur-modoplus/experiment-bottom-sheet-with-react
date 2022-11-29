@@ -20,8 +20,8 @@ export default function ChakraDrawer() {
 
   return (
     <>
-      <Button ref={ref} colorScheme="teal" onClick={onOpen}>
-        Open
+      <Button ref={ref} colorScheme="green" onClick={onOpen}>
+        Chakra Drawer
       </Button>
       <Drawer
         isOpen={isOpen}
@@ -30,9 +30,9 @@ export default function ChakraDrawer() {
         placement="bottom"
       >
         <DrawerOverlay />
-        <DrawerContent h="90%">
-          <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+        <DrawerContent h="90%" bg="bisque">
+          <DrawerCloseButton color="green" />
+          <DrawerHeader color="green">Create your account</DrawerHeader>
 
           <DrawerBody>
             <HorizontalTab />
@@ -42,7 +42,6 @@ export default function ChakraDrawer() {
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme="blue">Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

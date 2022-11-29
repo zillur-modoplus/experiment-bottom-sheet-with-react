@@ -11,7 +11,7 @@ export default function SpringBottomSheet() {
   return (
     <>
       <Button colorScheme="blue" onClick={() => setOpen(true)}>
-        Open
+        Spring Bottom Sheet
       </Button>
       <BottomSheet open={open}>My awesome content here</BottomSheet>
     </>

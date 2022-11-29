@@ -19,7 +19,7 @@ export default function ChakraModal() {
   return (
     <>
       <Button color="blue" onClick={onOpen}>
-        Open Modal
+        Chakra Modal
       </Button>
 
       <Box>
@@ -29,11 +29,12 @@ export default function ChakraModal() {
           motionPreset="slideInBottom"
           scrollBehavior="inside"
           isCentered={false}
+          colorScheme="whiteAlpha"
         >
           <ModalOverlay />
-          <ModalContent pos="absolute" top="0">
+          <ModalContent bg="#fff" pos="absolute" top="0">
             <ModalHeader>Modal Title</ModalHeader>
-            <ModalCloseButton />
+            <ModalCloseButton color="#000" />
             <ModalBody>
               <TabInsideTab />
             </ModalBody>

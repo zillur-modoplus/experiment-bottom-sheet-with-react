@@ -11,7 +11,9 @@ export default function ReactBottomSheet() {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Open sheet</Button>
+      <Button onClick={() => setOpen(true)} colorScheme="orange">
+        React Bottom Sheet
+      </Button>
 
       <Sheet
         ref={ref}
@@ -33,6 +35,7 @@ export default function ReactBottomSheet() {
                 fontSize={24}
                 as={CloseIcon}
                 onClick={() => setOpen(false)}
+                color="black"
               />
             </Flex>
           </Sheet.Header>
